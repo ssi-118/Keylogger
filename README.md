@@ -16,26 +16,35 @@ This is **not a background keylogger**. It only records text typed directly into
 ## Project Structure
 
 ```text
-KeyloggerRemoteLab/
-  receiver_server/
-    src/
-      app.py
-      generate_key.py
-    data/
-      encrypted_logs.jsonl
-    requirements.txt
-    .env.example
-
-  typing_client/
-    src/
-      app.py
-      templates/
-        index.html
-      static/
-        app.js
-        styles.css
-    requirements.txt
-    .env.example
+typetrail-lab/
+│
+├── docs/
+│   └── Keylogger_IP_OP.docx
+│
+├── receiver_server/
+│   ├── src/
+│   │   ├── app.py
+│   │   └── generate_key.py
+│   │
+│   ├── .env.example
+│   └── requirements.txt
+│
+├── typing_client/
+│   ├── src/
+│   │   ├── app.py
+│   │   │
+│   │   ├── static/
+│   │   │   ├── app.js
+│   │   │   └── styles.css
+│   │   │
+│   │   └── templates/
+│   │       └── index.html
+│   │
+│   ├── .env.example
+│   └── requirements.txt
+│
+├── .gitignore
+└── README.md
 ```
 
 ## How It Works
