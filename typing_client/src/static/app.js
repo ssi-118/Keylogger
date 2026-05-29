@@ -50,8 +50,6 @@ sendBtn.addEventListener("click", async () => {
   showOutput(result);
   setStatus(result.status || "Done");
 
-  await refreshLogs();
-
   typingBox.value = "";
   charCount.textContent = "0 chars";
 });
