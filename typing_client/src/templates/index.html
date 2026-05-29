@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TypeTrail Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Cybersecurity Learning Lab</p>
+        <h1>TypeTrail</h1>
+        <p class="subtitle">
+          A consent-based remote logging sandbox for learning encryption, APIs, and secure telemetry.
+        </p>
+      </div>
+
+      <div class="status-card">
+        <span class="pulse"></span>
+        <div>
+          <strong>Remote receiver</strong>
+          <p>Encrypted storage enabled</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <section class="composer">
+        <div class="section-heading">
+          <h2>Typing Sample</h2>
+          <span id="charCount">0 chars</span>
+        </div>
+
+        <label class="consent">
+          <input id="consent" type="checkbox">
+          I consent to send this sample to the remote lab server.
+        </label>
+
+        <textarea
+          id="typingBox"
+          disabled
+          placeholder="Type a harmless sample here, then send it to the remote receiver..."
+        ></textarea>
+
+        <div class="actions">
+          <button id="sendBtn" disabled>Encrypt & Send</button>
+          <button id="loadBtn" class="secondary">View Remote Logs</button>
+          <button id="clearBtn" class="danger">Clear Logs</button>
+        </div>
+      </section>
+
+      <section class="dashboard">
+        <div class="metric">
+          <span>Total Logs</span>
+          <strong id="totalLogs">0</strong>
+        </div>
+
+        <div class="metric">
+          <span>Last Status</span>
+          <strong id="lastStatus">Ready</strong>
+        </div>
+
+        <div class="output-panel">
+          <div class="section-heading">
+            <h2>Lab Output</h2>
+            <span>Encrypted + decrypted view</span>
+          </div>
+
+          <pre id="output">Waiting for an action...</pre>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
