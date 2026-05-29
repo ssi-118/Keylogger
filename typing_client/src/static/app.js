@@ -50,18 +50,19 @@ sendBtn.addEventListener("click", async () => {
   showOutput(result);
   setStatus(result.status || "Done");
 
+  await refreshLogCount();
+
   typingBox.value = "";
   charCount.textContent = "0 chars";
 });
 
-async function refreshLogs() {
+async function refreshLogCount() {
   const response = await fetch("/logs");
   const result = await response.json();
 
   totalLogs.textContent = result.count ?? 0;
-  showOutput(result);
 
-  return result;
+  return result.count ?? 0;
 }
 
 loadBtn.addEventListener("click", async () => {
